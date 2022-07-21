@@ -1,0 +1,18 @@
+{
+  "name": "config-standards",
+  "version": "1.0.0",
+  "description": "Conjunto de configurações padrão para diversas ferramentas",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustMartins/config-standards.git"
+  },
+  "author": "Gustavo Martins <gustavo_martins92@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GustMartins/config-standards/issues"
+  },
+  "homepage": "https://github.com/GustMartins/config-standards#readme"
+}
