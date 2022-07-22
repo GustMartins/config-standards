@@ -16,8 +16,10 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
+    'filename-rules',
   ],
   rules: {
+    'filename-rules/match': [ 'error', 'kebab-case' ],
     'init-declarations': [ 'error', 'always' ],
     'no-shadow': [ 'error', {
       builtinGlobals: true,
