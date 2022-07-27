@@ -199,7 +199,10 @@ module.exports = {
         sourceType: 'module',
         loggerFn: false,
       },
-      rules: {},
+      rules: {
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': [ 'error' ],
+      },
     },
     {
       files: [ '*.d.ts' ],
