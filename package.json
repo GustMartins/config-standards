@@ -18,11 +18,20 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
-    "@typescript-eslint/parser": "^5.30.7",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
     "eslint": "^8.20.0",
     "eslint-plugin-filename-rules": "^1.2.0",
     "husky": "^8.0.1",
     "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "17.x",
+    "@commitlint/config-conventional": "17.x",
+    "@typescript-eslint/eslint-plugin": "5.x",
+    "@typescript-eslint/parser": "5.x",
+    "eslint": "8.x",
+    "eslint-plugin-filename-rules": "1.2.x",
+    "typescript": "4.x"
   }
 }
