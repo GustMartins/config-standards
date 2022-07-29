@@ -6,8 +6,6 @@ const SPACE_INDENTATION = 2,
 module.exports = {
   extends: 'eslint:recommended',
   env: {
-    browser: true,
-    node: true,
     es6: true,
   },
   parser: '@typescript-eslint/parser',
@@ -40,7 +38,7 @@ module.exports = {
     'consistent-this': [ 'error', 'self' ],
     'eol-last': 'error',
     'func-style': [ 'error', 'declaration', { allowArrowFunctions: true } ],
-    'id-length': [ 'error', { min: 3 } ],
+    'id-length': [ 'error', { min: 3, exceptions: [ 'id' ] } ],
     indent: [ 'error', SPACE_INDENTATION, {
       VariableDeclarator: 'first',
       SwitchCase: 1,
@@ -75,7 +73,7 @@ module.exports = {
     'no-plusplus': [ 'error', { allowForLoopAfterthoughts: true } ],
     'func-call-spacing': 'error',
     'no-trailing-spaces': 'error',
-    'no-underscore-dangle': 'error',
+    'no-underscore-dangle': [ 'error', { allowAfterThis: true } ],
     'no-unneeded-ternary': 'error',
     'object-curly-spacing': [ 'error', 'always' ],
     'one-var': [ 'error', 'always' ],
@@ -202,6 +200,8 @@ module.exports = {
       rules: {
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': [ 'error' ],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [ 'error' ],
       },
     },
     {
@@ -210,6 +210,12 @@ module.exports = {
         'no-unused-vars': 'off',
         '@typescript-eslint/no-namespace': 'off',
         '@typescript-eslint/no-empty-interface': 'off',
+      },
+    },
+    {
+      files: '*.test.ts',
+      rules: {
+        'no-undef': 'off',
       },
     },
   ],
